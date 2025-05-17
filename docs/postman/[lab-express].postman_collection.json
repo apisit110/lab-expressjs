@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "681a2156-397b-4bf4-a9ef-86cd4af67d61",
+		"name": "[lab-express]",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11271684"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ENDPOINT}}",
+					"host": [
+						"{{ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{ENDPOINT}}",
+					"host": [
+						"{{ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dynamic route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ENDPOINT}}/1",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nested route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ENDPOINT}}/1/profile",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"1",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Middleware",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ENDPOINT}}/1/setting",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"1",
+						"setting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business logic",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "TEST",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/1/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"1",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ENDPOINT",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
