@@ -2,6 +2,16 @@
   {
     "id": 1,
     "username": "admin",
-    "password": "123456"
+    "password": "123456",
+    "role": "ADMIN",
+    "permissions": [
+      {
+        "name": "USER",
+        "view": true,
+        "create": true,
+        "edit": true,
+        "export": true
+      }
+    ]
   }
 ]
